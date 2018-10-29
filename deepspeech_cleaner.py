@@ -366,7 +366,7 @@ def create_new_db():
     	    `dialect`	TEXT,
     	    `dataset`	TEXT,
     	    `errors`	INTEGER,
-    	    `language`	TEXT,
+    	    `lang`	TEXT,
     	    `letters`	INTEGER,
     	    `letters_per_sek`	INTEGER
         )"""  
