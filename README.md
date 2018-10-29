@@ -41,7 +41,7 @@ pip3 install -r requirements.txt
 ## Quick Start
 
 
-### --help for all possible parameters
+### for all possible parameters
 ```
 python3 deepspeech-cleaner.py --help
 
