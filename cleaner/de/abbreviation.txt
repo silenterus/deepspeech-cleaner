@@ -1,0 +1,105 @@
+a. a. O.>am angegebenen Ort
+Abb.>Abbildung
+Abh.>Abhandlung
+Abk.>Abkürzung
+allg.>allgemein
+bes.>besonders
+bez.>bezahlt
+Bez.>Bezeichnung
+bzw.>beziehungsweise
+eigtl.>eigentlich
+erg.>ergänze
+geb.>geboren
+gegr.>gegründet
+Ggs.>Gegensatz
+i. e. S.>im engeren Sinne
+i. w. S.>im weiteren Sinne
+jmd.>jemand
+jmdm.>jemandem
+jmdn.>jemanden
+jmds.>jemandes
+o. Ä.>oder Ähnliches
+u.>und
+u. a.>unter anderem
+u. U.>unter Umständen
+u. Ä.>und Ähnliche
+übertr.>übertragen
+u. dgl.>und dergleichen
+ugs.>umgangssprachlich
+urspr.>ursprünglich
+usw.>und so weiter
+zz.>zurzeit
+zzt.>zurzeit
+Buchw.>Buchwesen
+dt.>deutsch
+Spr.>Sprache
+Sprachw.>Sprachwissenschaft
+Zus.>Zusammensetzung
+afrik.>afrikanisch
+Astrol.>Astrologie
+amerik.>amerikanisch
+argent.>argentinisch
+ev.>evangelisch
+Jh.>Jahrhundert
+evang.>evangelisch
+bayr.>bayrisch
+hebr.>hebräisch
+chin.>chinesisch
+hl.>heilig
+dt.>deutsch
+Dtschl.>Deutschland
+kath.>katholisch
+europ.>europäisch
+lat.>lateinisch
+Frk.>Frankreich
+luth.>lutherisch
+frz.>französisch
+Hst.>Hauptstadt
+Myth.>Mythologie
+jap.>japanisch
+natsoz.>nationalsozialistisch
+ndrl.>niederländisch
+n. Chr.>nach Christus
+n.Chr.>nach Christus
+norw.>norwegisch
+österr.>österreichisch
+Philos.>Philosophie
+Österr.>Österreich
+prot.>protestantisch
+port.>portugiesisch
+portug.>portugiesisch
+relig.>religiös
+schweiz.>schweizerisch
+Relig.>Religion
+skand.>skandinavisch
+Theol.>Theologie
+tschech.>tschechisch
+v. Chr.>vor Christus
+v.Chr.>vor Christus
+Anat.>Anatomie
+Bankw.>Bankwesen
+Archit.>Architektur
+Bgb.>Bergbau
+Astron.>Astronomie
+Elektr.>Elektrotechnik
+Biol.>Biologie
+Forstw.>Forstwesen
+Bot.>Botanik
+Fot.>Fotografie
+Chem.>Chemie
+Landw.>Landwirtschaft
+Geol.>Geologie
+Mio.>Millionen
+Math.>Mathematik
+Rechtsw.>Rechtswesen
+Med.>Medizin
+Seew.>Seewesen
+Meteor.>Meteorologie
+Sp.>Sport
+Phys.>Physik
+Tech.>Technik
+Psych.>Psychologie
+Wirtsch.>Wirtschaft
+Soziol.>Soziologie
+Wiss.>Wissenschaft
+Zool.>Zoologie

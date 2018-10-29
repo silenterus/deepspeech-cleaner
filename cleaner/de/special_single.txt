@@ -1,0 +1,14 @@
+$>dollar
+£>pfund
+€>euro
+m³>kubikmeter
+km²>quadratkilometer
+m²>quadratmeter
+¾>drei viertel
+½>ein einhalb
+¼>ein viertel
+°c>grad
+ºc>grad
+§>paragraph
+&>und
+%>prozent

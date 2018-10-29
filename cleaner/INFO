@@ -1,0 +1,17 @@
+
+
+
+every text file is a table in your sql file
+
+
+
+you can determine the query through the text files.
+example: you want only female speaker with a hessen dialect then put "female" in gender.txt and "hessen" in dialect.txt
+
+
+the "_not.txt" refers to exceptions. 
+example: you want all dialects except "hessen" then put "hessen" in the dialaect_not.txt
+
+
+!!! if you change the txt names or add more .txt files you screw the script          !!!
+!!! only change content of the files - if you dont want use some them let them blank !!!
