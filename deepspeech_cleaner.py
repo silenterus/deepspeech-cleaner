@@ -36,7 +36,6 @@ standard_letter = re.compile(r'[a-zA-Z]')
 
 
 
-index = 0
 
 
 
