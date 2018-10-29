@@ -65,6 +65,9 @@ python3 deepspeech-cleaner.py --help
 
 
 ### Inserter
+
+##### analyze annd insert Common Voice Corpus 
+
 ```
 python3 deepspeech-cleaner.py insert_cs --path /path/to/common_voice_corpus/
 
@@ -77,17 +80,17 @@ python3 deepspeech-cleaner.py insert_cs --path /path/to/common_voice_corpus/
 
 
 
-#### creating training files in "training/defaulter" with default values without lm.binary + trie
+##### creating training files in "training/defaulter" with default values without lm.binary + trie
 ```
 python3 deepspeech-cleaner.py create_files
 
 ```
-#### creating training files in "training/german300k" with default values without lm.binary + trie
+##### creating training files in "training/german300k" with default values without lm.binary + trie
 ```
 python3 deepspeech-cleaner.py create_files --training german300k
 ```
 
-#### creating training files in "training/german200k" with default values and lm.binary + trie
+##### creating training files in "training/german200k" with default values and lm.binary + trie
 ###### put [all_corpora_filtered_maryfied.txt](http://ltdata1.informatik.uni-hamburg.de/kaldi_tuda_de/German_sentences_8mil_filtered_maryfied.txt.gz) in 
 > deepspeech-cleaner/cleaner 
 ###### i used DeepSpeech Version 0.2.1-alpha.2 to generate the trie. I hope they didnt change the language model since then
@@ -98,12 +101,12 @@ python3 deepspeech-cleaner.py create_files --training german200k --trie True
 ### Trainer
 
 
-#### start training for defaulter
+##### start training for defaulter
 ```
 bash start_train.sh defaulter
 ```
 
-#### start training for german300k
+##### start training for german300k
 ```
 bash start_train.sh german300k
 ```
