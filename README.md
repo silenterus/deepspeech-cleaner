@@ -5,11 +5,11 @@
 #### 
 
 ## Installation :
-
+```
 sudo apt-get update 
 sudo apt-get upgrade
 sudo apt-get install make cmake sqlite3 git python3 python3-pip 
-
+```
 
 
 
