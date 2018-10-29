@@ -2,6 +2,8 @@
 
 ### Multi-Language Dataset Cleaner/Creator for [Mozilla's DeepSpeech Framework ](https://github.com/mozilla/DeepSpeech/) 
 
+!!! prototype only supports 'de' right now
+
 #### 
 
 ## Installation :
@@ -68,7 +70,7 @@ python3 deepspeech-cleaner.py create_files --training german300k
 
 
 #### creating training files in "training/german200k" with default values and lm.binary + trie
-#### put all_corpora_filtered_maryfied.txt in 
+##### put [all_corpora_filtered_maryfied.txt](http://ltdata1.informatik.uni-hamburg.de/kaldi_tuda_de/German_sentences_8mil_filtered_maryfied.txt.gz) in 
 >>> deepspeech-cleaner/cleaner 
 
 #### the paramater doesnt work yet
