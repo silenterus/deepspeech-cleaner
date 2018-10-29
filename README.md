@@ -41,11 +41,20 @@ pip3 install -r requirements.txt
 ## Quick Start
 
 
-### for all possible parameters
+### all possible parameters
 ```
 python3 deepspeech-cleaner.py --help
 
 ```
+#### default text querys
+> deepspeech-cleaner/de/sql_query 
+
+##### strings for query 
+>> *.txt
+
+##### strings for NOT query 
+>> *_not.txt
+
 
 
 ### Downloader
@@ -80,7 +89,7 @@ python3 deepspeech-cleaner.py create_files --training german300k
 
 #### creating training files in "training/german200k" with default values and lm.binary + trie
 ###### put [all_corpora_filtered_maryfied.txt](http://ltdata1.informatik.uni-hamburg.de/kaldi_tuda_de/German_sentences_8mil_filtered_maryfied.txt.gz) in 
->>> deepspeech-cleaner/cleaner 
+> deepspeech-cleaner/cleaner 
 ###### i used DeepSpeech Version 0.2.1-alpha.2 to generate the trie. I hope they didnt change the language model since then
 ```
 python3 deepspeech-cleaner.py create_files --training german200k --trie True
