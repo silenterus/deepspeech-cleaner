@@ -1128,7 +1128,6 @@ if __name__ == '__main__':
     elif mode == 'test':
 
 
-        show_progress(1521462189,20,200,'testi test')
         exit(1)
   
     elif mode == 'delete_model' or mode == 'delete_checkpoints':
