@@ -1,8 +1,8 @@
 # deepspeech-cleaner
 
 ### Multi-Language Dataset Cleaner/Creator for [Mozilla's DeepSpeech Framework ](https://github.com/mozilla/DeepSpeech/) 
-
-!!! prototype only supports 'de' right now
+alpha-version
+only supports german right now
 
 #### 
 
