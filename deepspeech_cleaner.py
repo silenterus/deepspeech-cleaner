@@ -1019,7 +1019,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DeepSpeech Dataset Cleaner')
     parser.add_argument('mode',help="create_files - [create training files from db],\n\ninsert_cv - [insert Common Voice Corpus in db],\n\ndelete_model - [delete training folder (containing all files and exported graphs)],\n\ndelete_checkpoints - [delete checkpoints  (containing all files and exported graphs)],\n\ncreate_trie - [creating trie file],\n\ncreate_lm - [creating lm.binary file],\n\ncreate_trie_lm - [creating trie and lm.binary file]",type=str)
 
-    parser.add_argument('--training',help=" [%(default)s] path to model files", default='defaulter', type=str)
+    parser.add_argument('--training',help=" [%(default)s] path to model files", default='standard', type=str)
 
     parser.add_argument('--path',help=" [%(default)s] path to corpus", default='', type=str)
 
