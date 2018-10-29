@@ -80,7 +80,7 @@ python3 deepspeech-cleaner.py insert_cs --path /path/to/common_voice_corpus/
 
 
 
-##### creating training files in "training/defaulter" with default values 
+##### creating training files in "training/standard" with default values 
 ```
 python3 deepspeech-cleaner.py create_files
 
@@ -101,9 +101,9 @@ python3 deepspeech-cleaner.py create_files --training german200k --trie True
 ### Trainer
 
 
-##### start training for defaulter
+##### start training for standard
 ```
-bash start_train.sh defaulter
+bash start_train.sh standard
 ```
 
 ##### start training for german300k
