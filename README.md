@@ -66,7 +66,7 @@ python3 deepspeech-cleaner.py --help
 
 ### Inserter
 
-##### analyze annd insert Common Voice Corpus 
+##### analyze and insert Common Voice Corpus 
 
 ```
 python3 deepspeech-cleaner.py insert_cs --path /path/to/common_voice_corpus/
