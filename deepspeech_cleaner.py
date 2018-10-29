@@ -15,7 +15,7 @@ import random
 import numpy as np
 import sox
 from cleaner import cleaning
-
+import time
 
 
 
@@ -483,6 +483,9 @@ def deepspeech_parser(path):
         f.close()
     index = 0
     print('   >---< analyze audio files')
+
+
+    starttime = int(time.time()) 
     for csv in all_csv:
 
         with open(csv) as f:
@@ -495,7 +498,7 @@ def deepspeech_parser(path):
                 row += 1
                
                 if row % 100 == 0:
-                    show_progress(index,all_lines, 'analyzing audio files')
+                    show_progress(starttime,index,all_lines, 'analyzing audio files')
                     print('   >---< [' + str(index) + '/' + str(all_lines) + ']')
                     print('   >---< [' + str(row) + '/' + str(maxline) + ']')
                     print('   ¦¦!¦¦ [' + str(notfound) + ']')
@@ -597,12 +600,10 @@ def scan_file(data):
 
 
 
-def show_progress(current,maxlen,work):
-    os.system('clear')
+def show_progress(start,current,maxlen,work):
 
-    print('')
-    print('                     ' + str(work))
-    print('')
+    elapsed = int(time.time())-int(start) 
+
     progress = ''
     current_percent = (current/maxlen)*100
 
@@ -615,7 +616,12 @@ def show_progress(current,maxlen,work):
         else:
             progress = progress + '¦'
         
-
+    estimate = (elapsed/100)*percent
+    os.system('clear')
+    print('') 
+    print('                     ' + str(work))
+    print('')
+    #print('                                            ' + str(elapsed) + ' sek / estimate ' + str(estimate) + ' sek')
     print('   ' + str(progress))
     print('                          [' + str(round(current_percent,2)) + '%]' )
     print('')
@@ -701,6 +707,7 @@ def create_train_files():
 
     tri_sentences = []   
     index = 0
+    starttime = int(time.time()) 
     for lines in data:
         cleaned = sentences_cleaner(changer,str(lines[3]))
 
@@ -728,7 +735,7 @@ def create_train_files():
             durations.append(lines[4])                                  
             newlines.append(data_dir + ',' + str(lines[2]) + ',' + cleaned)
         if index % 10000 == 0:
-            show_progress(index,len(data),'cleaning sentences')
+            show_progress(starttime,index,len(data),'cleaning sentences')
             print('   -----------------------\n   <>-<> cleaned sentences ' + '[' + str(success) + ']' + '\n   ¦¦!¦¦ dropped sentences ' + '[' + str(failer) + ']\n' + '   ¦¦!¦¦ not found         ' + '[' + str(notfound) + ']\n')
 
 
@@ -839,12 +846,13 @@ def create_tri(sentences,changer):
 
 
     index = 0
+    starttime = int(time.time()) 
     with open(str(current_dir) + '/' + str(args.clean), 'r') as f:
         for text in f:
             cleaned = sentences_cleaner(changer,str(text))
                                                 
             if index % 10000 == 0:
-                show_progress(index,counter,'cleaning corpora')
+                show_progress(starttime,index,counter,'cleaning corpora')
                 #print('[' + str(index) + ']') 
             index += 1
             if cleaned == False: 
@@ -882,8 +890,7 @@ def create_tri(sentences,changer):
         print('didnt find DeepSpeech/generate_trie or DeepSpeech/native_client/generate_trie')
         exit(1)
 
-    
-    os.system(cmd)
+
 
 
 
@@ -1012,7 +1019,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DeepSpeech Dataset Cleaner')
     parser.add_argument('mode',help="create_files - [create training files from db],\n\ninsert_cv - [insert Common Voice Corpus in db],\n\ndelete_model - [delete training folder (containing all files and exported graphs)],\n\ndelete_checkpoints - [delete checkpoints  (containing all files and exported graphs)],\n\ncreate_trie - [creating trie file],\n\ncreate_lm - [creating lm.binary file],\n\ncreate_trie_lm - [creating trie and lm.binary file]",type=str)
 
-    parser.add_argument('--training',help=" [%(default)s] path to model files", default='defaulter', type=str)
+    parser.add_argument('--training',help=" [%(default)s] path to model files", default='standard', type=str)
 
     parser.add_argument('--path',help=" [%(default)s] path to corpus", default='', type=str)
 
@@ -1097,6 +1104,10 @@ if __name__ == '__main__':
 
         clean_path = args.clean
 
+    
+
+  
+
         create_train_files()
     elif mode == 'insert_cv':
         if args.path == '':
@@ -1117,8 +1128,7 @@ if __name__ == '__main__':
     elif mode == 'test':
 
 
-    
-        show_progress(20,200,'testi test')
+        show_progress(1521462189,20,200,'testi test')
         exit(1)
   
     elif mode == 'delete_model' or mode == 'delete_checkpoints':
