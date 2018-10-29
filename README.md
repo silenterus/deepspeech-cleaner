@@ -49,10 +49,10 @@ python3 deepspeech-cleaner.py --help
 #### default text querys
 > deepspeech-cleaner/de/sql_query 
 
-##### strings for query 
+###### strings for query 
 >> *.txt
 
-##### strings for NOT query 
+###### strings for NOT query 
 >> *_not.txt
 
 
