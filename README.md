@@ -16,7 +16,7 @@ sudo apt-get install make cmake sqlite3 git python3 python3-pip
 
 
  
-#### if you want to buld tri and binary (you need to install them otherwise the script wont find them)
+#### if you want to build tri and binary (you need to install them otherwise the script wont find them)
 ```
 git clone https://github.com/kpu/kenlm
 cd kenlm
