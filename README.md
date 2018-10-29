@@ -66,7 +66,7 @@ python3 deepspeech-cleaner.py --help
 
 ### Inserter
 ```
-python3 deepspeech-cleaner.py insert_cs /path/to/common_voice_corpus/
+python3 deepspeech-cleaner.py insert_cs --path /path/to/common_voice_corpus/
 
 ```
 
