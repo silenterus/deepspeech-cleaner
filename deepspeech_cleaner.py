@@ -603,7 +603,7 @@ def scan_file(data):
 def show_progress(start,current,maxlen,work):
 
     elapsed = int(time.time())-int(start) 
-
+    #elapsed = 3222
     progress = ''
     current_percent = (current/maxlen)*100
 
@@ -616,12 +616,12 @@ def show_progress(start,current,maxlen,work):
         else:
             progress = progress + '¦'
         
-    estimate = (elapsed/100)*percent
+    estimate = round(elapsed*current_percent)
     os.system('clear')
     print('') 
     print('                     ' + str(work))
     print('')
-    #print('                                            ' + str(elapsed) + ' sek / estimate ' + str(estimate) + ' sek')
+    print('                ' + str(elapsed) + ' sek / estimate ' + str(estimate) + ' sek')
     print('   ' + str(progress))
     print('                          [' + str(round(current_percent,2)) + '%]' )
     print('')
@@ -1019,7 +1019,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DeepSpeech Dataset Cleaner')
     parser.add_argument('mode',help="create_files - [create training files from db],\n\ninsert_cv - [insert Common Voice Corpus in db],\n\ndelete_model - [delete training folder (containing all files and exported graphs)],\n\ndelete_checkpoints - [delete checkpoints  (containing all files and exported graphs)],\n\ncreate_trie - [creating trie file],\n\ncreate_lm - [creating lm.binary file],\n\ncreate_trie_lm - [creating trie and lm.binary file]",type=str)
 
-    parser.add_argument('--training',help=" [%(default)s] path to model files", default='standard', type=str)
+    parser.add_argument('--training',help=" [%(default)s] path to model files", default='defaulter', type=str)
 
     parser.add_argument('--path',help=" [%(default)s] path to corpus", default='', type=str)
 
@@ -1135,4 +1135,6 @@ if __name__ == '__main__':
         print('   <>-<> deleted ' + str(mode) + ' - [' + str(current_model) + ']')
     else:
         parser.print_help()
+
+
 
