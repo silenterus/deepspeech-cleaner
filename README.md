@@ -54,6 +54,16 @@ python3 deepspeech-cleaner.py --help
 
 
 
+
+### Inserter
+```
+python3 deepspeech-cleaner.py insert_csv /path/to/common_voice_corpus/
+
+```
+
+
+
+
 ### Creator
 
 
