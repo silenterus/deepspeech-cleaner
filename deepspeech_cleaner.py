@@ -616,7 +616,7 @@ def show_progress(start,current,maxlen,work):
         else:
             progress = progress + '¦'
         
-    estimate = round(elapsed*current_percent)
+    estimate = round(elapsed*(100-current_percent))
     os.system('clear')
     print('') 
     print('                     ' + str(work))
