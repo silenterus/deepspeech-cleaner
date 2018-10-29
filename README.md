@@ -97,7 +97,7 @@ bash start_train.sh german300k
 
 
 
-## Notes and Common Issues
+## Worth checking out
 
 
   * [Mozilla's DeepSpeech](https://github.com/mozilla/DeepSpeech/)
@@ -117,4 +117,3 @@ bash start_train.sh german300k
 
 
 
-## Background
