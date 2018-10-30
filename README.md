@@ -13,6 +13,10 @@ sudo apt-get upgrade
 sudo apt-get install make cmake sqlite3 git python3 python3-pip 
 ```
 
+#### install Tensorflow using Mozilla's fork 
+follow the instruction https://github.com/mozilla/tensorflow/tree/r1.11
+
+
 #### install DeepSpeech 
 follow the instruction https://github.com/mozilla/DeepSpeech
 
