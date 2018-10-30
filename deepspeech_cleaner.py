@@ -616,7 +616,11 @@ def show_progress(start,current,maxlen,work):
         else:
             progress = progress + '¦'
         
-    estimate = round(elapsed*(100-current_percent))
+    if 99 < current_percent:
+        current_percent = 100
+        progress = '##################################################'
+
+    estimate = round((elapsed/100)*(100-current_percent))
     os.system('clear')
     print('') 
     print('                     ' + str(work))
@@ -712,8 +716,6 @@ def create_train_files():
         cleaned = sentences_cleaner(changer,str(lines[3]))
 
 
-       # print(cleaned) 
-        #exit(1)
 
         if str(lines[0]) == 'cv': 
             data_dir = str(lines[1])
@@ -726,7 +728,7 @@ def create_train_files():
         if cleaned == False: 
             failer += 1
         elif os.path.isfile(data_dir) == False:
-            #print(data_dir)
+
             notfound += 1
         else:
             success += 1  
@@ -882,9 +884,9 @@ def create_tri(sentences,changer):
     cmd =  "build_binary trie -q 16 -b 7 -a 64 " + current_dir + "/training/" + current_model + "/words.arpa " + current_dir + "/training/" + current_model + "/lm.binary"
     os.system(cmd)
 
+    if os.path.isfile(deepspeech_dir + "/generate_trie") == True:
+        cmd =  deepspeech_dir + "/generate_trie " + current_dir + "/training/" + current_model + "/alphabet.txt " + current_dir + "/training/" + current_model + "/lm.binary " + current_dir + "/training/" + current_model + "/clean " + current_dir + "/training/" + current_model + "/trie"
     if os.path.isfile(deepspeech_dir + "/native_client/generate_trie") == True:
-        cmd =  deepspeech_dir + "/native_client/generate_trie " + current_dir + "/training/" + current_model + "/alphabet.txt " + current_dir + "/training/" + current_model + "/lm.binary " + current_dir + "/training/" + current_model + "/clean " + current_dir + "/training/" + current_model + "/trie"
-    elif os.path.isfile(deepspeech_dir + "/generate_trie") == True:
         cmd =  deepspeech_dir + "/native_client/generate_trie " + current_dir + "/training/" + current_model + "/alphabet.txt " + current_dir + "/training/" + current_model + "/lm.binary " + current_dir + "/training/" + current_model + "/clean " + current_dir + "/training/" + current_model + "/trie"
     else:
         print('didnt find DeepSpeech/generate_trie or DeepSpeech/native_client/generate_trie')
@@ -892,7 +894,7 @@ def create_tri(sentences,changer):
 
 
 
-
+    os.system(cmd)
 
 
 
@@ -1104,8 +1106,7 @@ if __name__ == '__main__':
 
         clean_path = args.clean
 
-    
-
+  
   
 
         create_train_files()
@@ -1128,12 +1129,13 @@ if __name__ == '__main__':
     elif mode == 'test':
 
 
+
+
+
         exit(1)
   
     elif mode == 'delete_model' or mode == 'delete_checkpoints':
         print('   <>-<> deleted ' + str(mode) + ' - [' + str(current_model) + ']')
     else:
         parser.print_help()
-
-
 
