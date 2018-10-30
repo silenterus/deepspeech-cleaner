@@ -13,6 +13,8 @@ sudo apt-get upgrade
 sudo apt-get install make cmake sqlite3 git python3 python3-pip 
 ```
 
+#### install DeepSpeech 
+follow the instruction https://github.com/mozilla/DeepSpeech
 
 
  
