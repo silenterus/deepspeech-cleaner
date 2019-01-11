@@ -73,7 +73,7 @@ python3 deepspeech-cleaner.py download --lang fr
 ### Inserter
 ##### insert corpora - in case you download the files by yourself
 ```
-python3 deepspeech-cleaner.py insert --path /path/to/corpora/ 
+python3 deepspeech-cleaner.py insert /path/to/corpora/ 
 
 ```
 
