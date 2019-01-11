@@ -666,7 +666,6 @@ if __name__ == '__main__':
 
 
 
-    print(sec_input)
 
 
     if mode == 'help':
