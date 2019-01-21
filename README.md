@@ -6,10 +6,10 @@
 
 
 ### Supported Languages 
+  *  [de - German = 9.84%](https://drive.google.com/open?id=1quyJ9cHX4f5wEg3K3QayEmgqlhoYUPUd)
   *  [pl - Polish = 13.7%](https://drive.google.com/open?id=14oDu1Kes2I16ReBhCJpAFETHVRETlT0N)
   *  [es - Spanish = 13.9%](https://drive.google.com/open?id=1Yw5SUbIzKUqsEQCwP-eoaTW492QYc1Ol)
   *  [it - Italian = 18.4%](https://drive.google.com/open?id=14l-jx56zM84EWpfhkYT0gHc9cZZ-Ti9D)
-  *  [de - German = 18.9%](https://drive.google.com/open?id=19eV4yvXrM89YayfF6OAGNnWo0a6vXmoH)
   *  [fr - French = 22.7%](https://drive.google.com/open?id=1tHNM-7HnPQBdooVgTxNl6F-pgVbRMk3h)
   *  [uk - Ukrainian = 29.9%](https://drive.google.com/open?id=1dQ5MzlkhjdiQpLCJDNqV1-Z2GsquXIx1)
   *  [ru - Russian = 36.9%](https://drive.google.com/open?id=1eBm2aD0QGh8y5LgZP0MYqZresdcVIvgz)
@@ -235,6 +235,101 @@ python3 deepspeech-cleaner.py help
 
 
 
+
+###    German Results:                    [de]
+
+
+#####    ----- options:                      
+#####    <---< size                          [5-10000]
+#####    <---< duration                      [0.5-15]
+#####    <---< bitrate                       [0]
+#####    <---< samplerate                    [16000-48000]
+#####    <---< channels                      [0]
+#####    <---< wordcount                     [0]
+#####    <---< wordsec                       [0.2-2.0]
+#####    <---< lettercount                   [0]
+#####    <---< lettersec                     [0]
+#####    <---< upvotes                       [0]
+#####    <---< downvotes                     [0]
+#####    <---< sectors                       [0]
+#####    <---< wordlength                    [0]
+#####    <---< numbers                       [False]
+#####    <---< upper                         [False]
+#####    <---< lower                         [0]
+#####    ----- info:                         
+#####    >---> corpora                       [forscher-tuda-vox16-zamia-custom-tatoeba-librivox-cv]
+#####    >---> gb                            [57.21]
+#####    >---> hours                         [494.2]
+#####    >---> words                         [3683014]
+#####    >---> letters                       [23751976]
+#####    >---> words per sec                 [2.07]
+#####    >---> letters per sec               [13.35]
+#####    >---> all files                     [339232]
+#####    >---> train files                   [237463]
+#####    >---> test files                    [50886]
+#####    >---> dev files                     [50886]
+
+
+Test - WER: 0.098498, CER: 3.228931, loss: 23.721140
+
+WER: 3.500000, CER: 37.000000, loss: 326.320953
+
+    src: “eine neue”
+    res: “einem neuen leben und neuen pflichten entgegen”
+
+WER: 3.000000, CER: 6.000000, loss: 7.963222
+
+    src: “ausverkauft”
+    res: “aus der fast”
+
+WER: 3.000000, CER: 5.000000, loss: 11.577581
+
+    src: “riesengebirge”
+    res: “riesen der berge”
+
+WER: 3.000000, CER: 6.000000, loss: 11.873451
+
+    src: “beerdigung”
+    res: “wer die un”
+
+WER: 3.000000, CER: 8.000000, loss: 17.944910
+
+    src: “besuchstermin”
+    res: “es wuchs der”
+
+WER: 3.000000, CER: 6.000000, loss: 22.410923
+
+    src: “beerdigung”
+    res: “wer die un”
+
+WER: 3.000000, CER: 4.000000, loss: 25.310646
+
+    src: “weitermachen”
+    res: “bei der machen”
+
+WER: 3.000000, CER: 34.000000, loss: 237.857559
+
+    src: “misses dent”
+    res: “es ist mein wunsch vergessen vernachlässigt”
+
+WER: 3.000000, CER: 74.000000, loss: 484.282074
+
+    src: “es endigte mit einem”
+    res: “es endigte mit einem lauten schall welcher in jedem einsamen zimmer in echo zu wecken schienen”
+
+WER: 2.800000, CER: 69.000000, loss: 650.892578
+
+    src: “computer alarm in neun minuten”
+    res: “per definition handelt es sich bei diesen geräten im engeren sinn um personal computer”
+
+
+
+
+   -------------------------------------------------
+
+
+
+
 ###   Polnish Results:                    [pl]
 
    
@@ -368,48 +463,6 @@ python3 deepspeech-cleaner.py help
 ######   I  - res: "hasentendido"
 
 
-
-
-   -------------------------------------------------
-
-
-
-###    German Uppercase Results:                    [de]
-
-
-
-
-######   I Test of Epoch 15 - WER: 0.189181, loss: 32.588361254231685, mean edit distance: 0.075573
-######   I WER: 0.125000, loss: 0.548302, mean edit distance: 0.023810
-######   I - src: “Fr dieses Geld kann man sich nichts kaufen”
-######   I - res: “Für dieses Geld kann man sich nichts kaufen”
-######   I WER: 0.142857, loss: 0.420042, mean edit distance: 0.025641
-######   I - src: “Sie ist nicht abhngig von der Forderung”
-######   I - res: “Sie ist nicht abhängig von der Forderung”
-######   I WER: 0.142857, loss: 0.467154, mean edit distance: 0.022222
-######   I - src: “um die Sicherheit des Systems zu gewhrleisten”
-######   I - res: “Um die Sicherheit des Systems zu gewhrleisten”
-######   I WER: 0.142857, loss: 0.512185, mean edit distance: 0.027778
-######   I - src: “Es gibt immer nur noch hhere Steuern”
-######   I - res: “Es gibt immer nur noch höhere Steuern”
-######   I WER: 0.142857, loss: 0.615085, mean edit distance: 0.016393
-######   I - src: “die achtzehn Hundert achtundsiebzig zwischen dem Hauptbahnhof”
-######   I - res: “Die achtzehn Hundert achtundsiebzig zwischen dem Hauptbahnhof”
-######   I WER: 0.200000, loss: 0.396312, mean edit distance: 0.030303
-######   I - src: “Viele Menschen fhlen sich belogen”
-######   I - res: “Viele Menschen fühlen sich belogen”
-######   I WER: 0.200000, loss: 0.480538, mean edit distance: 0.048780
-######   I - src: “im Sommer achtzehn Hundert achtunddreißig”
-######   I - res: "Im Sommer achtzehn Hundert achtunddreißig "
-######   I WER: 0.250000, loss: 0.135146, mean edit distance: 0.041667
-######   I - src: “Die Kapazitt wurde erhht”
-######   I - res: “Die Kapazität wurde erhht”
-######   I WER: 0.250000, loss: 0.493074, mean edit distance: 0.062500
-######   I - src: “Ich mache sie zu”
-######   I - res: “Ich mache Sie zu”
-######   I WER: 0.250000, loss: 0.601982, mean edit distance: 0.058824
-######   I - src: “Das Ende ist nahe”
-######   I - res: "Das Ende ist nah "
 
 
    -------------------------------------------------
@@ -825,7 +878,6 @@ python3 deepspeech-cleaner.py help
 ######   I WER: 0.500000, loss: 1.879081, mean edit distance: 0.100000
 ######   I  - src: "não corras"
 ######   I  - res: "não coras"
-
 
 
 
