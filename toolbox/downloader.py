@@ -190,7 +190,7 @@ def check_corpora(lang,selected,types=0):
 
 def insert_corpora(target_path,insert=False,db=None,lang=''):
     files = tools.search_path(target_path)
-    testing = [['aligned.swc','swc'],['/male/','librivox'],['etc/PROMPT','vox'],['etc/prompts-','vox'],['Kinect-Beam.','tuda'],['conditioned.txt','accent'],['.trn','vystadial','swc'],['.strn','swc'],['/cv-other-train.csv','cv'],['/data.csv','nicolas'],['.ttrn','tatoeba'],['.ctrn','custom']]
+    testing = [['aligned.swc','swc'],['/male/','librivox'],['etc/PROMPT','vox'],['etc/prompts-','vox'],['Kinect-Beam.','tuda'],['conditioned.txt','accent'],['.trn','vystadial','swc'],['.strn','swc'],['invalidated.tsv','cv'],['/cv-other-train.csv','cv'],['/data.csv','nicolas'],['.ttrn','tatoeba'],['.ctrn','custom']]
     dataset = ''
     for f in files:
         for test in testing:
